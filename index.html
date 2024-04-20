@@ -43,6 +43,7 @@
       }
 
       .box {
+        position: relative;
         background-color: #123;
         padding: 1em 2em;
         border-radius: 6px;
@@ -51,9 +52,7 @@
       }
 
       .box:hover {
-        /*
         box-shadow: 0 0 8px 4px #246;
-        */
       }
 
       .title {
@@ -86,16 +85,28 @@
         background-position: center;
         background-size: cover;
       }
+
+      .bg-link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      .box :not(.bg-link) {
+        z-index: 2;
+      }
     </style>
   </head>
 
   <body>
     <main>
       <div class="box pointz">
+        <a class="bg-link" href="https://aolagers.github.io/pointz/"> </a>
         <div class="title-row">
-          <a href="https://aolagers.github.io/pointz/">
-            <div class="title">pointz</div>
-          </a>
+          <div class="title">pointz</div>
           <a href="https://github.com/aolagers/pointz">
             <img src="./img/github-mark-white.png" width="20" />
           </a>
@@ -109,10 +120,10 @@
           </div>
         </div>
       </div>
+
       <div class="box">
-        <a href="https://aolagers.github.io/tuuneri/">
-          <div class="title">tuuneri</div>
-        </a>
+        <a class="bg-link" href="https://aolagers.github.io/tuuneri/"> </a>
+        <div class="title">tuuneri</div>
         <div class="description">Web-based guitar tuner</div>
         <div class="meta-row">
           <div>2022</div>
@@ -122,10 +133,10 @@
           </div>
         </div>
       </div>
+
       <div class="box">
-        <a href="https://blobs.fly.dev">
-          <div class="title">blobs</div>
-        </a>
+        <a class="bg-link" href="https://blobs.fly.dev"> </a>
+        <div class="title">blobs</div>
         <div class="description">Quick multiplayer strategy game</div>
         <div class="meta-row">
           <div>2016</div>
@@ -135,12 +146,12 @@
           </div>
         </div>
       </div>
+
       <div class="box">
+        <a class="bg-link" href="https://github.com/aolagers/rook"> </a>
         <div class="title-row">
           <div class="title">Rook</div>
-          <a href="https://github.com/aolagers/rook">
-            <img src="./img/github-mark-white.png" width="20" />
-          </a>
+          <img src="./img/github-mark-white.png" width="20" />
         </div>
         <div class="description">Chess engine</div>
         <div class="meta-row">
